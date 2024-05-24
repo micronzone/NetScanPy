@@ -67,6 +67,19 @@ python3 netscanpy.py -l
 python3 netscan.py -n 8
 ```
 
+## 업데이트
+
+NetScanPy 레포지토리 업데이트를 확인하는 것이 좋습니다!
+
+1. 변경 사항 확인:
+    ```sh 
+    git status
+    ```
+2. 변경 사항 가져오기:
+    ```sh
+    git pull origin main
+    ```
+
 ## 기여 방법
 
 기여해주셔서 감사합니다! 이 프로젝트에 기여하시려면 아래 단계를 따라 주세요:
