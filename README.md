@@ -8,6 +8,7 @@ NetScanPy는 Python으로 작성된 네트워크 스캐닝 도구입니다. 이 
 
 ## 기능
 
+- macOS, Linux, Windows 크로스플랫폼 지원
 - 다양한 `nmap` 옵션을 사용하여 네트워크 스캔 실행
 - 수동으로 IP 주소 입력 또는 로컬 네트워크 스캔을 통한 대상 선택
 - 스캔 결과를 실시간으로 확인
@@ -75,9 +76,10 @@ python3 netscan.py -n 8
 
 ## 업데이트
 
-NetScanPy 레포지토리 업데이트를 확인하는 것이 좋습니다!
+NetScanPy 리포지토리 업데이트를 확인하는 것이 좋습니다!
 
-```sh 
+```sh
+cd NetScanPy
 git status
 ```
 
@@ -91,7 +93,7 @@ git pull origin main
 
 기여해주셔서 감사합니다! 이 프로젝트에 기여하시려면 아래 단계를 따라 주세요:
 
-1. 이 레포지토리를 포크하세요
+1. 이 리포지토리를 포크하세요
 2. 기능 브랜치(micronzone 브랜치)를 생성하세요 (`git checkout -b micronzone/NetScanPy`)
 3. 변경 사항을 커밋하세요 (`git commit -m 'Add some NetScanPy'`)
 4. 브랜치에 푸시하세요 (`git push origin micronzone/NetScanPy`)
