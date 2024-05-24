@@ -17,10 +17,10 @@ NetScanPy는 Python으로 작성된 네트워크 스캐닝 도구입니다. 이 
 
 1. 프로젝트를 클론합니다:
 
-```bash
-git clone https://github.com/micronzone/NetScanPy.git
-cd NetScanPy
-```
+    ```bash
+    git clone https://github.com/micronzone/NetScanPy.git
+    cd NetScanPy
+    ```
 
 2. (선택 사항) 가상 환경을 생성하고 활성화합니다:
     ```sh
@@ -30,13 +30,13 @@ cd NetScanPy
     ```
 
 3. 필요한 라이브러리를 설치합니다:
-```sh
-pip3 install -r requirements.txt
-```
-또는 `tqdm>=4.62.3`
-```sh
-pip3 install tqdm
-```
+    ```sh
+    pip3 install -r requirements.txt
+    ```
+    또는 `tqdm>=4.62.3`
+    ```sh
+    pip3 install tqdm
+    ```
 
 ## 사용 방법
 
@@ -47,7 +47,7 @@ python3 netscanpy.py [옵션]
 ### 옵션
 
 - `-l` : 모든 스캐닝 옵션 번호
-- `-n {1, 2, ..}` : 스캐닝 옵션 번호를 선택하여 빠른 실행 (예: 8번 옵션 선택 `-n 8`)
+- `-n {1, 2, ..}` : 스캐닝 옵션 번호를 선택하여 빠른 실행 (예: 8번 옵션 선택하려면 `-n 8`)
 - `-h, --help` : NetScanPy 도움말
 
 ### 예시
