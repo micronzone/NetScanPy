@@ -40,6 +40,12 @@ NetScanPy는 Python으로 작성된 네트워크 스캐닝 도구입니다. 이 
 
 ## 사용 방법
 
+대화형으로 실행
+```sh
+python3 netscanpy.py
+```
+
+빠른 스캔 실행
 ```sh
 python3 netscanpy.py [옵션]
 ```
@@ -71,14 +77,17 @@ python3 netscan.py -n 8
 
 NetScanPy 레포지토리 업데이트를 확인하는 것이 좋습니다!
 
-1. 변경 사항 확인:
-    ```sh 
-    git status
-    ```
-2. 변경 사항 가져오기:
-    ```sh
-    git pull origin main
-    ```
+변경 사항 확인:
+
+```sh 
+git status
+```
+
+변경 사항 가져오기:
+
+```sh
+git pull origin main
+```
 
 ## 기여 방법
 
