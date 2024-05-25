@@ -14,7 +14,9 @@ NetScanPy는 Python으로 작성된 네트워크 스캐닝 도구입니다. 이 
 - 진행 상태를 실시간 `tqdm` 진행률로 표시
 - `ndiff` 옵션을 사용하여 현재 스캔과 이전 스캔 비교 확인
 - 사용자 친화적인 CLI 인터페이스 제공
+
 <img width="682" alt="ss" src="https://github.com/micronzone/NetScanPy/assets/47780105/5a71d584-1b86-4a29-874f-b601f29f1499">
+
 ### 설치 방법
 
 NetScanPy는 `Nmap`을 기반으로 하는 도구입니다. 아직 설치되어 있지 않다면 macOS의 경우 `brew install nmap` 통해 설치하거나 [Nmap Install Guide](https://nmap.org/book/install.html) 다양한 설치 방법을 참고할 수 있습니다.
