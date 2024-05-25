@@ -14,38 +14,34 @@ NetScanPy는 Python으로 작성된 네트워크 스캐닝 도구입니다. 이 
 - 진행 상태를 실시간 `tqdm` 진행률로 표시
 - `ndiff` 옵션을 사용하여 현재 스캔과 이전 스캔 비교 확인
 - 사용자 친화적인 CLI 인터페이스 제공
-
-<img width="682" alt="ss_1" src="https://github.com/micronzone/NetScanPy/assets/47780105/56e4dfde-e21a-42a4-afe7-a3c8ddaf2f7a">
-<img width="682" alt="ss_2" src="https://github.com/micronzone/NetScanPy/assets/47780105/ef425749-1305-471e-bf69-523fd3d83fc6">
-<img width="682" alt="ss_3" src="https://github.com/micronzone/NetScanPy/assets/47780105/04a289e9-0e9b-4590-a01c-51aa924c3eda">
-
+<img width="682" alt="ss" src="https://github.com/micronzone/NetScanPy/assets/47780105/5a71d584-1b86-4a29-874f-b601f29f1499">
 ### 설치 방법
 
-NetScanPy는 `Nmap`을 기반으로 하는 도구입니다. 아직 설치되어 있지 않다면 macOS의 경우 `brew install nmap` 통해 설치하거나 [Nmap Install Guide](https://nmap.org/book/install.html) 설치 방법을 참고할 수 있습니다.
+NetScanPy는 `Nmap`을 기반으로 하는 도구입니다. 아직 설치되어 있지 않다면 macOS의 경우 `brew install nmap` 통해 설치하거나 [Nmap Install Guide](https://nmap.org/book/install.html) 다양한 설치 방법을 참고할 수 있습니다.
 
-1. 프로젝트를 클론합니다:
+프로젝트를 클론합니다:
 
-    ```bash
-    git clone https://github.com/micronzone/NetScanPy.git
-    cd NetScanPy
-    ```
+```bash
+git clone https://github.com/micronzone/NetScanPy.git
+cd NetScanPy
+```
 
-2. (선택 사항) 가상 환경을 생성하고 활성화합니다:
-    ```sh
-    python3 -m venv myenv
-    source myenv/bin/activate  # Linux 또는 macOS
-    .\myenv\Scripts\activate   # Windows
-    ```
+(선택 사항) 가상 환경을 생성하고 활성화합니다:
+```sh
+python3 -m venv myenv
+source myenv/bin/activate  # Linux 또는 macOS
+.\myenv\Scripts\activate   # Windows
+```
 
-3. 필요한 라이브러리를 설치합니다:
-    ```sh
-    pip3 install -r requirements.txt
-    ```
-    또는 `tqdm>=4.62.3`, `colorama>=0.4.0` 이상 설치할 수 있습니다:
-    ```sh
-    pip3 install tqdm
-    pip3 install colorama
-    ```
+필요한 라이브러리를 설치합니다:
+```sh
+pip3 install -r requirements.txt
+```
+또는 `tqdm>=4.62.3`, `colorama>=0.4.0` 이상 설치할 수 있습니다:
+```sh
+pip3 install tqdm
+pip3 install colorama
+```
 
 ### 사용 방법
 
