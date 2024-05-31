@@ -31,6 +31,11 @@ git clone https://github.com/micronzone/NetScanPy.git
 cd NetScanPy
 ```
 
+실행 권한 부여:
+```bash
+chmod +x netscanpy
+```
+
 (선택 사항) 가상 환경을 생성하고 활성화합니다:
 ```sh
 python3 -m venv .venv
@@ -42,16 +47,29 @@ source .venv/bin/activate  # Linux 또는 macOS
 ```sh
 pip3 install -r requirements.txt
 ```
+
 또는 `tqdm>=4.62.3`, `colorama>=0.4.0` 이상 설치할 수 있습니다:
 ```sh
 pip3 install tqdm
 pip3 install colorama
 ```
 
+별칭 추가 (선택 사항):
+
+```bash
+nano ~/.zshrc   # macOS ~/.zshrc, Linux `~/.bashrc` or `~/.zshrc`
+alias netscanpy='/path/to/netscanpy'
+```
+
+```bash
+source ~/.zshrc
+```
+
 ### 사용 방법
 
 대화형 실행
 ```sh
+# netscanpy을 별칭에 추가한 실행 방법입니다(설치 참고) 또는 NetScanPy 디렉토리에서 ./netscanpy 실행
 netscanpy
 ```
 
@@ -92,17 +110,17 @@ netscanpy -l
 
 빠른 스캔을 위해 Nmap 스캐닝 옵션을 사용하여 실행:
 ```sh
-netscan.py -n 1
+netscanpy -n 1
 ```
 
 빠른 스캔을 위해 Nmap 스캐닝 옵션을 사용 + 비교 모드로 실행:
 ```sh
-netscan.py -d -n 1
+netscanpy -d -n 1
 ```
 
 빠른 스캔을 위해 Nmap 스캐닝 옵션을 사용 + 비교 모드 + 디버그 모드로 실행:
 ```sh
-netscan.py -d -n 1 --debug
+netscanpy -d -n 1 --debug
 ```
 
 ### 업데이트

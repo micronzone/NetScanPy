@@ -29,6 +29,12 @@ git clone https://github.com/micronzone/NetScanPy.git
 cd NetScanPy
 ```
 
+Grant execute permission:
+
+```bash
+chmod +x netscanpy
+```
+
 (Optional) Create and activate a virtual environment:
 
 ```
@@ -50,11 +56,23 @@ pip3 install tqdm
 pip3 install colorama
 ```
 
+Add alias (optional):
+
+```bash
+nano ~/.zshrc   # macOS ~/.zshrc, Linux `~/.bashrc` or `~/.zshrc`
+alias netscanpy='/path/to/netscanpy'
+```
+
+```bash
+source ~/.zshrc
+```
+
 ### Usage
 
 Interactive execution:
 
 ```
+# Using alias (refer to installation) or run ./netscanpy from the NetScanPy directory
 netscanpy
 ```
 
@@ -101,19 +119,19 @@ netscanpy -l
 Execute with Nmap scanning options for quick scan:
 
 ```
-netscan.py -n 1
+netscanpy -n 1
 ```
 
 Execute with Nmap scanning options for quick scan with comparison mode:
 
 ```
-netscan.py -d -n 1
+netscanpy -d -n 1
 ```
 
 Execute with Nmap scanning options for quick scan with comparison mode and debug mode:
 
 ```
-netscan.py -d -n 1 --debug
+netscanpy -d -n 1 --debug
 ```
 
 ### Updates
