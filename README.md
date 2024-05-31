@@ -1,132 +1,144 @@
+<p align="right">
+  [English]
+  [<a href="README-ko.md">한국어</a>]
+</p>
+
 # NetScanPy
 
-NetScanPy는 Python으로 작성된 네트워크 스캐닝 도구입니다. 이 프로젝트는 네트워크 보안 관리자나 시스템 관리자들이 네트워크에 대한 정보를 수집하고 보안 취약점을 확인하는 데 도움을 줍니다. 이 도구는 `nmap`을 기반으로 하며, 사용자 친화적으로 안내되는 옵션에 따라 다양한 스캔을 실행할 수 있습니다.
+NetScanPy is a network scanning tool written in Python. This project helps network security administrators or system administrators gather information about networks and identify security vulnerabilities. It is based on nmap and can perform various scans based on user-friendly options.
 
-### 배경
+> NetScanPy was created to meet the demand for a scanning tool that facilitates the easy execution of frequently used options while continuously monitoring the network.
 
->네트워크를 지속적으로 모니터링하면서 자주 사용하는 옵션을 간편하게 실행하는 스캐닝 도구가 필요했는데, NetScanPy는 이러한 요구에 부합하여 만들게 되었습니다.
-
-### 기능
-
-- macOS, Linux, Windows 크로스플랫폼 지원
-- 다양한 `nmap` 옵션을 사용하여 네트워크 스캔 실행
-- 수동으로 IP 주소 입력 또는 로컬 네트워크 스캔을 통한 대상 선택
-- 진행 상태를 실시간 `tqdm` 진행률로 표시
-- `ndiff` 옵션을 사용하여 현재 스캔과 이전 스캔 비교 확인
-- 사용자 친화적인 CLI 인터페이스 제공
+Features
+- Cross-platform support for macOS, Linux, and Windows
+- Execute network scans using various nmap options
+- Select targets manually by entering IP addresses or through local network scans
+- Display progress in real-time with tqdm progress bar
+- Compare current and previous scans using the ndiff option
+- Provides a user-friendly CLI interface
 
 <img width="682" alt="ss" src="https://github.com/micronzone/NetScanPy/assets/47780105/5a71d584-1b86-4a29-874f-b601f29f1499">
 
-### 설치 방법
+### Installation
+NetScanPy is a tool based on Nmap. If not already installed, on macOS, you can install it via brew install nmap or refer to the Nmap Install Guide for various installation methods.
 
-NetScanPy는 `Nmap`을 기반으로 하는 도구입니다. 아직 설치되어 있지 않다면 macOS의 경우 `brew install nmap` 통해 설치하거나 [Nmap Install Guide](https://nmap.org/book/install.html) 다양한 설치 방법을 참고할 수 있습니다.
+Clone the project:
 
-프로젝트를 클론합니다:
-
-```bash
+```
 git clone https://github.com/micronzone/NetScanPy.git
 cd NetScanPy
 ```
 
-(선택 사항) 가상 환경을 생성하고 활성화합니다:
-```sh
-python3 -m venv myenv
-source myenv/bin/activate  # Linux 또는 macOS
-.\myenv\Scripts\activate   # Windows
+(Optional) Create and activate a virtual environment:
+
+```
+python3 -m venv .venv
+source .venv/bin/activate  # Linux or macOS
+.\.venv\Scripts\activate   # Windows
 ```
 
-필요한 라이브러리를 설치합니다:
-```sh
+Install the required libraries:
+
+```
 pip3 install -r requirements.txt
 ```
-또는 `tqdm>=4.62.3`, `colorama>=0.4.0` 이상 설치할 수 있습니다:
-```sh
+
+Alternatively, you can install tqdm>=4.62.3, colorama>=0.4.0, or higher:
+
+```
 pip3 install tqdm
 pip3 install colorama
 ```
 
-### 사용 방법
+### Usage
 
-대화형 실행
-```sh
-python3 netscanpy.py
+Interactive execution:
+
+```
+netscanpy
 ```
 
-빠른 스캔 실행
-```sh
-python3 netscanpy.py [옵션]
+Quick scan execution:
+
+```
+netscanpy [options]
 ```
 
-### 옵션
+### Options
 
-- `-l` : 모든 스캐닝 옵션 번호
-- `-n {1, 2, ..}` : 스캐닝 옵션 번호를 선택하여 빠른 실행 (예: 1번 옵션 선택은 `-n 1`)
-- `-d` : difflib를 사용하여 현재 스캔과 이전 스캔을 비교
-- `--debug` : 디버그 모드로 실행
-- `-h, --help` : NetScanPy 도움말
+- `-l`: List all scanning option numbers
+- `-n` {`1`, `2`, ..}: Select a scanning option number for quick execution (e.g., selecting option 1 is `-n 1`)
+- `-d`: Compare current scan with previous scan using `difflib`
+- `--debug`: Run in debug mode
+- `-h`, `--help`: NetScanPy help
 
-### 예시
+### Examples
 
-Nmap 스캐닝 옵션을 대화형으로 실행:
-```sh
-python3 netscanpy.py
+Execute Nmap scanning options interactively:
+
+```
+netscanpy
 ```
 
-Nmap 스캐닝 옵션을 대화형 + 비교 모드로 실행:
-```sh
-python3 netscanpy.py -d
+Execute Nmap scanning options interactively with comparison mode:
+
+```
+netscanpy -d
 ```
 
-Nmap 스캐닝 옵션을 대화형 + 비교 모드 + 디버그 모드로 실행:
-```sh
-python3 netscanpy.py -d --debug
+Execute Nmap scanning options interactively with comparison mode and debug mode:
+
+```
+netscanpy -d --debug
 ```
 
-빠른 스캔을 위해 Nmap 스캐닝 옵션을 출력:
-```sh
-python3 netscanpy.py -l
+Output Nmap scanning options for quick scan:
+
+```
+netscanpy -l
 ```
 
-빠른 스캔을 위해 Nmap 스캐닝 옵션을 사용하여 실행:
-```sh
-python3 netscan.py -n 1
+Execute with Nmap scanning options for quick scan:
+
+```
+netscan.py -n 1
 ```
 
-빠른 스캔을 위해 Nmap 스캐닝 옵션을 사용 + 비교 모드로 실행:
-```sh
-python3 netscan.py -d -n 1
+Execute with Nmap scanning options for quick scan with comparison mode:
+
+```
+netscan.py -d -n 1
 ```
 
-빠른 스캔을 위해 Nmap 스캐닝 옵션을 사용 + 비교 모드 + 디버그 모드로 실행:
-```sh
-python3 netscan.py -d -n 1 --debug
+Execute with Nmap scanning options for quick scan with comparison mode and debug mode:
+
+```
+netscan.py -d -n 1 --debug
 ```
 
-### 업데이트
+### Updates
 
-NetScanPy 리포지토리 업데이트를 확인하는 것이 좋습니다!
+It's recommended to check for updates to the NetScanPy repository!
 
-```sh
+```
 cd NetScanPy
 git status
 ```
 
-변경 사항 가져오기:
+### Fetch changes:
 
-```sh
+```
 git pull origin main
 ```
 
-### 기여 방법
+### Contributing
 
-기여해주셔서 감사합니다! 이 프로젝트에 기여하시려면 아래 단계를 따라 주세요:
+Thank you for contributing! To contribute to this project, follow these steps:
 
-1. 이 리포지토리를 포크하세요
-2. 기능 브랜치(micronzone 브랜치)를 생성하세요 (`git checkout -b micronzone/NetScanPy`)
-3. 변경 사항을 커밋하세요 (`git commit -m 'Add some NetScanPy'`)
-4. 브랜치에 푸시하세요 (`git push origin micronzone/NetScanPy`)
-5. 풀 리퀘스트를 여세요
-
-### 라이센스
-
-이 프로젝트는 MIT 라이센스 하에 배포됩니다. 자세한 내용은 [LICENSE](LICENSE) 파일을 참고하세요.
+1. Fork this repository
+2. Create a feature branch (micronzone branch) (git checkout -b micronzone/NetScanPy)
+3. Commit your changes (git commit -m 'Add some NetScanPy')
+4. Push to the branch (git push origin micronzone/NetScanPy)
+5. Open a pull request
+License
+This project is distributed under the MIT License. See the [LICENSE](LICENSE) file for details.
